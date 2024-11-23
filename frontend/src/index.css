@@ -18,6 +18,7 @@
     word-break: break-word;
     white-space: pre-wrap;
 }
+/* General Styles */
 *,
 body {
   font-family: "Poppins", sans-serif;
@@ -153,7 +154,7 @@ body {
 /* Latest News */
 .latestNewsDiv {
   padding: 0 20px;
-  height: 80vh;
+  height: auto;
   margin-top: 200px;
   margin-bottom: 250px;
   width: 100%;
@@ -193,23 +194,7 @@ body {
   border: 1px dotted grey;
   position: relative;
 }
-.latestNewsDiv .newsGallery .div1 {
-  top: 150px;
-  left: 30px;
-  animation: shake 8s infinite;
-  animation-delay: 1s;
-}
-.latestNewsDiv .newsGallery .div2 {
-  animation: shake 8s infinite;
-  animation-delay: 2s;
-}
 
-.latestNewsDiv .newsGallery .div3 {
-  top: 100px;
-  right: 30px;
-  animation: shake 8s infinite;
-  animation-delay: 3s;
-}
 .latestNewsDiv .newsGallery .div img {
   width: 100%;
   height: 60%;
@@ -229,6 +214,7 @@ body {
 
 /* Technologies Section */
 .technologiesDiv {
+    margin-top: -100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -264,6 +250,7 @@ body {
 .technologiesDiv .banner2 img {
   width: 100%;
   margin-top: 30px;
+  margin-left: 20px;
   border-radius: 20px;
   transition: transform 4s ease-in-out;
   animation: zoomInOut 10s infinite;
@@ -279,21 +266,15 @@ body {
   justify-content: space-around;
   margin-top: 150px;
   margin-bottom: 150px;
-
   width: 100%;
-}
-.exploreMoreDiv .textDiv h1 {
-  font-weight: 400;
-  font-size: 30px;
-  padding: 20px;
 }
 
 .exploreMoreDiv .div {
   width: 25%;
-
   padding: 20px;
   text-align: center;
 }
+
 .exploreMoreDiv .div .subDiv {
   border: 0.5px solid lightgrey;
   border-radius: 10px;
@@ -324,30 +305,36 @@ body {
   left: 5px;
   width: 250px;
 }
+
 .exploreMoreDiv .div .subDiv i {
   font-size: 30px;
   position: relative;
   left: 15px;
   color: #0984e3;
 }
+
 .footerDiv {
   padding: 0px 50px 50px 50px;
   background-color: #f5f6fa;
 }
+
 .footerDiv .topDiv {
   width: 90%;
   padding: 3% 5% 3% 5%;
   color: #2d3436;
   border-bottom: 1px solid grey;
 }
+
 .footerDiv .topDiv span {
   padding: 20px;
   font-size: 25px;
 }
+
 .footerDiv .topDiv .socioLinks i {
   padding: 20px 20px 20px 20px;
   font-size: 25px;
 }
+
 .footerDiv .middleDiv {
   width: 90%;
   padding: 5%;
@@ -355,85 +342,127 @@ body {
   justify-content: space-between;
   border-bottom: 1px solid grey;
 }
+
 .footerDiv .middleDiv div {
   color: #2d3436;
   font-size: 18px;
   width: 30%;
 }
+
 .footerDiv .middleDiv .signUpDiv input {
   width: 300px;
   padding: 12px;
   border-radius: 5px;
-  border: 1px solid grey;
+  border: 1px solid lightgray;
+  margin-bottom: 10px;
+  font-size: 18px;
 }
+
 .footerDiv .middleDiv .signUpDiv button {
-  width: 100px;
+  width: 300px;
   padding: 12px;
-  border-radius: 25px;
-  border: 1px solid grey;
-  font-size: 20px;
-  color: #0984e3;
-  background-color: white;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+  background-color: #0984e3;
+  color: white;
+  font-size: 18px;
 }
 
-.footerDiv .bottomDiv {
-  width: 90%;
-  padding: 3% 5% 1% 5%;
-}
-.footerDiv .bottomDiv span {
-  padding: 20px;
-}
-.footerDiv .bottomDiv.bottomlogo {
-  font-weight: 800;
+/* Media Queries for Small Devices */
+@media only screen and (max-width: 768px) {
+  .navDiv {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .navDiv .leftMenuDiv,
+  .navDiv .rightMenuDiv {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .navDiv .logoDiv img {
+    width: 70px;
+  }
+
+  .bannerDiv h1 {
+    font-size: 60px;
+  }
+
+  .bannerDiv h3 {
+    font-size: 20px;
+  }
+
+  .learnMoreBtn {
+    width: 200px;
+    font-size: 18px;
+  }
+
+  .latestNewsDiv .newsGallery {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .latestNewsDiv .newsGallery .div {
+    width: 90%;
+    margin: 15px 0;
+  }
+
+  .technologiesDiv .banner2 img {
+    width: 90%;
+  }
+
+  .exploreMoreDiv {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .exploreMoreDiv .div {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  .footerDiv {
+    padding: 0 20px 30px 20px;
+  }
+
+  .footerDiv .middleDiv {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footerDiv .middleDiv div {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .footerDiv .middleDiv .signUpDiv input,
+  .footerDiv .middleDiv .signUpDiv button {
+    width: 80%;
+  }
 }
 
-/* Animation */
+@media only screen and (max-width: 480px) {
+  .latestNewsDiv .textDiv h1 {
+    font-size: 35px;
+  }
 
-@keyframes bounce {
-  0% {
-    transform: translateY(0); /* Start at the normal position */
+  .latestNewsDiv .textDiv h3 {
+    font-size: 18px;
   }
-  30% {
-    transform: translateY(-30px); /* Move up */
+
+  .footerDiv .topDiv span {
+    font-size: 18px;
   }
-  50% {
-    transform: translateY(0); /* Return to the starting position */
-  }
-  70% {
-    transform: translateY(-15px); /* Move up a little less */
-  }
-  100% {
-    transform: translateY(0); /* End at the normal position */
+
+  .footerDiv .middleDiv .signUpDiv input,
+  .footerDiv .middleDiv .signUpDiv button {
+    width: 80%;
   }
 }
-@keyframes zoomInOut {
-  0% {
-    transform: scale(1); /* start at normal size */
-  }
-  50% {
-    transform: scale(1.1); /* zoom in to 1.1 */
-  }
-  100% {
-    transform: scale(1); /* zoom back to normal size */
-  }
-}
-@keyframes shake {
-  0% {
-    transform: translatey(0);
-  }
-  25% {
-    transform: translatey(-10px);
-  }
-  50% {
-    transform: translatey(10px);
-  }
-  75% {
-    transform: translatey(-10px);
-  }
-  100% {
-    transform: translatey(0);
-  }
-}
+
+
 
 
 
