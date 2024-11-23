@@ -457,3 +457,105 @@
       }
     }
     
+    /* About Section */
+.aboutSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    background-color: #f5f6fa;
+  }
+  
+  .aboutSection .heading {
+    text-align: center;
+    font-size: 50px;
+    font-weight: 600;
+    color: #2d3436;
+    margin-bottom: 20px;
+  }
+  
+  .aboutSection .description {
+    width: 70%;
+    font-size: 20px;
+    line-height: 1.6;
+    color: #636e72;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .aboutSection .imageWrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 30px;
+  }
+  
+  .aboutSection .imageWrapper img {
+    width: 80%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+  /* Mobile Adjustments */
+  @media (max-width: 768px) {
+    .aboutSection {
+      padding: 30px 15px;
+    }
+  
+    .aboutSection .heading {
+      font-size: 35px;
+      margin-bottom: 15px;
+    }
+  
+    .aboutSection .description {
+      width: 90%;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+  
+    .aboutSection .imageWrapper img {
+      width: 100%;
+      margin-top: 20px;
+    }
+  }
+/* Sign-Up Button Design */
+.footerDiv .middleDiv .signUpDiv button {
+    width: 300px;
+    padding: 12px;
+    border-radius: 30px; /* Rounded corners */
+    border: none;
+    background: linear-gradient(135deg, #0984e3, #00cec9); /* Gradient background */
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    transition: all 0.3s ease; /* Smooth transition for effects */
+    cursor: pointer;
+}
+
+/* Hover Effect */
+.footerDiv .middleDiv .signUpDiv button:hover {
+    background: linear-gradient(135deg, #00cec9, #0984e3); /* Reverse gradient */
+    transform: translateY(-4px); /* Slight lift effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
+
+/* Focus Effect */
+.footerDiv .middleDiv .signUpDiv button:focus {
+    outline: none; /* Remove the default outline */
+    border: 2px solid #2d3436; /* Add custom focus border */
+}
+
+/* Disabled Button */
+.footerDiv .middleDiv .signUpDiv button:disabled {
+    background: #dfe6e9;
+    color: #b2bec3;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+  
