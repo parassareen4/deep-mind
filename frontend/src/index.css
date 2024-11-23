@@ -27,7 +27,6 @@
       box-sizing: border-box;
     }
     
-    /* Navbar */
     .navDiv {
       display: flex;
       justify-content: space-between;
@@ -94,7 +93,7 @@
       margin-left: 20px;
     }
     
-    /* Banner */
+    /* Banner Section */
     .bannerDiv {
       width: 100%;
       display: flex;
@@ -114,7 +113,7 @@
     .bannerDiv h1 {
       position: absolute;
       color: white;
-      font-size: 80px;
+      font-size: 60px;
       font-weight: 500;
       top: 30%;
       left: 50%;
@@ -126,9 +125,9 @@
     .bannerDiv h3 {
       position: absolute;
       color: white;
-      font-size: 25px;
+      font-size: 24px;
       font-weight: 500;
-      top: 40%;
+      top: 45%;
       left: 50%;
       transform: translate(-50%, -50%);
       text-align: center;
@@ -137,7 +136,7 @@
     
     .bannerDiv .learnMoreBtn {
       position: absolute;
-      bottom: 60px;
+      bottom: 10%;
       width: 250px;
       height: 60px;
       border-radius: 20px;
@@ -148,6 +147,8 @@
       font-weight: 600;
       transition: 0.5s ease;
       animation: shake 5s infinite;
+      left: 50%;
+      transform: translateX(-50%);
     }
     
     .bannerDiv .learnMoreBtn:hover {
@@ -319,6 +320,7 @@
       color: #0984e3;
     }
     
+    /* Footer Section */
     .footerDiv {
       padding: 0px 50px 50px 50px;
       background-color: #f5f6fa;
@@ -361,76 +363,97 @@
       border-radius: 5px;
       border: 1px solid lightgray;
       margin-bottom: 10px;
-      font-size: 18px;
     }
     
-    .footerDiv .middleDiv .signUpDiv button {
-      width: 300px;
+    .footerDiv .middleDiv .signUpDiv input:focus {
+      outline: none;
+    }
+    
+    .footerDiv .middleDiv .signUpDiv .signUpButton {
+      width: 100%;
       padding: 12px;
       border-radius: 5px;
-      border: 1px solid lightgray;
       background-color: #0984e3;
       color: white;
-      font-size: 18px;
+      border: none;
     }
     
-    /* Media Queries for Small Devices */
-    @media only screen and (max-width: 768px) {
+    .footerDiv .middleDiv .signUpDiv .signUpButton:hover {
+      background-color: #74b9ff;
+    }
+    
+    /* Mobile Specific Adjustments */
+    @media (max-width: 768px) {
+      /* Navbar Fix */
       .navDiv {
         flex-direction: column;
-        padding: 15px;
+        height: auto;
+        padding: 10px;
       }
     
       .navDiv .leftMenuDiv,
       .navDiv .rightMenuDiv {
         width: 100%;
-        justify-content: center;
-      }
-    
-      .navDiv .rightMenuDiv {
-        justify-content: flex-start;
+        justify-content: space-around;
         margin-top: 10px;
       }
     
+      .navDiv .leftMenuDiv .menuItem a,
+      .navDiv .rightMenuDiv .searchIcon i,
+      .navDiv .rightMenuDiv .geminiIcon img {
+        font-size: 18px;
+      }
+    
+      /* Banner Text Fix */
       .bannerDiv h1 {
         font-size: 40px;
+        top: 30%;
       }
     
       .bannerDiv h3 {
         font-size: 20px;
+        top: 45%;
       }
     
-      .learnMoreBtn {
-        width: 200px;
+      .bannerDiv .learnMoreBtn {
+        width: 80%;
         font-size: 18px;
+        bottom: 20%;
       }
     
+      /* News Gallery Adjustments */
       .latestNewsDiv .newsGallery {
         flex-direction: column;
+        justify-content: center;
         align-items: center;
       }
     
       .latestNewsDiv .newsGallery .div {
-        width: 80%;
+        width: 90%;
         margin: 20px 0;
       }
     
-      .technologiesDiv .banner2 img {
-        margin-left: 0;
-      }
-    
+      /* Explore More Adjustments */
       .exploreMoreDiv {
         flex-direction: column;
         align-items: center;
       }
     
       .exploreMoreDiv .div {
-        width: 80%;
-        margin-bottom: 30px;
+        width: 90%;
+        margin: 20px 0;
       }
     
-      .footerDiv {
-        padding: 0 20px 30px 20px;
+      /* Footer Adjustments */
+      .footerDiv .middleDiv {
+        flex-direction: column;
+        align-items: center;
+      }
+    
+      .footerDiv .middleDiv div {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
       }
     }
     
