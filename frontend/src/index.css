@@ -257,6 +257,7 @@
       width: 100%;
       margin-top: 30px;
       margin-left: 0px;
+      margin-right: 0px;
       border-radius: 20px;
       transition: transform 4s ease-in-out;
       animation: zoomInOut 10s infinite;
