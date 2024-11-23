@@ -169,18 +169,13 @@ const handleInputChange = (e) => {
       <header className="flex justify-between items-center p-2 sm:p-4 border-b border-gray-200">
         <div className="flex items-center gap-1 sm:gap-2">
     
-          <button
-            onClick={createNewChat}
-            className="p-1 sm:p-2 rounded-md hover:bg-gray-100"
-          >
-            <img src={newchat} alt="New Chat" className="h-4 w-4 sm:h-6 sm:w-6" />
-          </button>
+
           <div className="flex gap-1 items-center">
-            <span className="font-semibold text-lg sm:text-xl text-zinc-700">ExecuSenseAI </span>
+            <span className="font-semibold text-lg sm:text-xl text-zinc-700">DeepMind </span>
             <IoIosArrowDown/>
           </div>
         </div>
-        <h1 className="text-lg mr-10 sm:text-xl font-semibold hidden sm:flex gap-2 items-center">Demo Chat </h1>
+        <h1 className="text-lg  sm:text-xl font-semibold hidden sm:flex gap-2 items-center">AMA</h1>
         <div className="flex items-center gap-2 sm:gap-6">
           <motion.button
             whileTap={{ scale: 0.9 }}
@@ -258,7 +253,7 @@ const handleInputChange = (e) => {
                 sendMessage(e);
               }
             }}
-            placeholder="What can we help you with?"
+            placeholder="Ask the DeepMind team a question"
             className="flex-1 py-2 sm:py-3 px-3 sm:px-5 rounded-[33px] bg-[#f4f4f4] focus-within:outline-none placeholder:text-slate-600 text-sm sm:text-base resize-none overflow-hidden"
             rows="1"
           />
@@ -271,7 +266,7 @@ const handleInputChange = (e) => {
         </div>
       </form>
       <div className="text-center p-2 text-xs sm:text-sm hidden sm:block text-gray-500">
-        Make your workplace more productive with ExecuSense.
+      Google DeepMind
       </div>
     </div>
       );
