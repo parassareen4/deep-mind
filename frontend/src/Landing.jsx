@@ -1,4 +1,4 @@
-
+import { Link } from 'react-router-dom';
 function App() {
   return ( 
     <>
@@ -82,7 +82,10 @@ function Banner() {
     <div className="bannerDiv" id="banner">
       <img src="unnamed_014.webp" alt="Banner" />
       <h1>DEEPMIND AMA</h1>
+      <Link to={'/user'}>
       <button className="learnMoreBtn">Submit Your Question</button>
+      </Link>
+      
       <h3>A universal AI agent that is helpful in everyday life</h3>
     </div>
   );
