@@ -560,3 +560,253 @@
     box-shadow: none;
 }
   
+/* Latest News Section */
+.latestNewsDiv {
+    padding: 0 20px;
+    height: auto;
+    margin-top: 150px;
+    margin-bottom: 200px;
+    width: 100%;
+}
+
+.latestNewsDiv .textDiv {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 50px; /* Increased space between text and gallery */
+}
+
+.latestNewsDiv .textDiv h1 {
+    font-size: 50px;
+    font-weight: 600;
+    color: #2d3436;
+}
+
+.latestNewsDiv .textDiv h3 {
+    font-size: 30px;
+    font-weight: 400;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: #636e72;
+}
+
+/* News Gallery */
+.latestNewsDiv .newsGallery {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px; /* Space between the cards */
+    margin-top: 50px;
+}
+
+/* Individual News Item */
+.latestNewsDiv .newsGallery .div {
+    width: 30%;
+    margin: 15px 0;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+    border: 1px dotted grey;
+    position: relative;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Image Styling */
+.latestNewsDiv .newsGallery .div img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+}
+
+/* Text Inside Each News Card */
+.latestNewsDiv .newsGallery .div .text {
+    padding: 20px;
+    font-size: 18px;
+    color: #636e72;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.latestNewsDiv .newsGallery .div .text h4 {
+    font-size: 20px;
+    font-weight: 500;
+    color: #2d3436;
+    margin-bottom: 10px;
+}
+
+.latestNewsDiv .newsGallery .div .text p {
+    font-size: 16px;
+    color: #7f8c8d;
+    margin-bottom: 15px;
+}
+
+.latestNewsDiv .newsGallery .div:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+/* Media Queries for Smaller Devices */
+@media only screen and (max-width: 768px) {
+    .latestNewsDiv .newsGallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .latestNewsDiv .newsGallery .div {
+        width: 80%; /* Make cards wider on smaller screens */
+        margin: 20px 0;
+    }
+
+    .latestNewsDiv .textDiv h1 {
+        font-size: 40px; /* Reduce title size */
+    }
+
+    .latestNewsDiv .textDiv h3 {
+        font-size: 20px; /* Reduce subtitle size */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .latestNewsDiv .textDiv h1 {
+        font-size: 30px; /* Smaller title size for mobile */
+    }
+
+    .latestNewsDiv .textDiv h3 {
+        font-size: 18px; /* Smaller subtitle size for mobile */
+    }
+
+    .latestNewsDiv .newsGallery .div {
+        width: 100%; /* Full width on very small screens */
+    }
+}
+/* Technologies Section */
+.technologiesDiv {
+    padding: 0 20px;
+    height: auto;
+    margin-top: 150px;
+    margin-bottom: 100px;
+    width: 100%;
+}
+
+.technologiesDiv .textDiv {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 50px; /* Increased space between text and gallery */
+}
+
+.technologiesDiv .textDiv h1 {
+    font-size: 50px;
+    font-weight: 600;
+    color: #2d3436;
+}
+
+.technologiesDiv .textDiv h3 {
+    font-size: 30px;
+    font-weight: 400;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: #636e72;
+}
+
+/* Technologies Gallery */
+.technologiesDiv .techGallery {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px; /* Space between the cards */
+    margin-top: 50px;
+}
+
+/* Individual Technology Item */
+.technologiesDiv .techGallery .div {
+    width: 30%;
+    margin: 15px 0;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+    border: 1px dotted grey;
+    position: relative;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Image Styling */
+.technologiesDiv .techGallery .div img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+}
+
+/* Text Inside Each Technology Card */
+.technologiesDiv .techGallery .div .text {
+    padding: 20px;
+    font-size: 18px;
+    color: #636e72;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.technologiesDiv .techGallery .div .text h4 {
+    font-size: 20px;
+    font-weight: 500;
+    color: #2d3436;
+    margin-bottom: 10px;
+}
+
+.technologiesDiv .techGallery .div .text p {
+    font-size: 16px;
+    color: #7f8c8d;
+    margin-bottom: 15px;
+}
+
+.technologiesDiv .techGallery .div:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+/* Media Queries for Smaller Devices */
+@media only screen and (max-width: 768px) {
+    .technologiesDiv .techGallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .technologiesDiv .techGallery .div {
+        width: 80%; /* Make cards wider on smaller screens */
+        margin: 20px 0;
+    }
+
+    .technologiesDiv .textDiv h1 {
+        font-size: 40px; /* Reduce title size */
+    }
+
+    .technologiesDiv .textDiv h3 {
+        font-size: 20px; /* Reduce subtitle size */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .technologiesDiv .textDiv h1 {
+        font-size: 30px; /* Smaller title size for mobile */
+    }
+
+    .technologiesDiv .textDiv h3 {
+        font-size: 18px; /* Smaller subtitle size for mobile */
+    }
+
+    .technologiesDiv .techGallery .div {
+        width: 100%; /* Full width on very small screens */
+    }
+}
