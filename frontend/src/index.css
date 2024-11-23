@@ -18,6 +18,423 @@
     word-break: break-word;
     white-space: pre-wrap;
 }
+*,
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar */
+.navDiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-height: 60px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.navDiv .logoDiv {
+  display: flex;
+  align-items: center;
+}
+
+.navDiv .logoDiv img {
+  width: 100px;
+}
+
+.navDiv .logoDiv span {
+  font-size: 25px;
+  margin-left: 10px;
+  color: grey;
+}
+
+.navDiv .leftMenuDiv,
+.navDiv .rightMenuDiv {
+  display: flex;
+  align-items: center;
+}
+
+.navDiv .leftMenuDiv {
+  justify-content: space-between;
+  width: 30%;
+}
+
+.navDiv .rightMenuDiv {
+  justify-content: flex-end;
+  width: 40%;
+}
+
+.navDiv .leftMenuDiv .menuItem a {
+  font-size: 18px;
+  color: grey;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.navDiv .leftMenuDiv .menuItem a i {
+  margin-left: 5px;
+}
+
+.navDiv .rightMenuDiv .searchIcon i {
+  font-size: 30px;
+  color: grey;
+}
+
+.navDiv .rightMenuDiv .geminiIcon img {
+  width: 40px;
+  margin-left: 20px;
+}
+
+/* Banner */
+.bannerDiv {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  position: relative;
+  top: 40px;
+}
+
+.bannerDiv img {
+  width: 90%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.bannerDiv h1 {
+  position: absolute;
+  color: white;
+  font-size: 100px;
+  font-weight: 500;
+  top: 38%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+}
+.bannerDiv h3 {
+  position: absolute;
+  color: white;
+  font-size: 30px;
+  font-weight: 500;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.bannerDiv .learnMoreBtn {
+  position: absolute;
+  bottom: 265px;
+  width: 250px;
+  height: 70px;
+  border-radius: 20px;
+  border: 0;
+  font-size: 21px;
+  background-color: whitesmoke;
+  color: #2d3436;
+  font-weight: 600;
+  transition: 0.5s ease;
+  animation: shake 5s infinite;
+}
+
+.bannerDiv .learnMoreBtn:hover {
+  border: 3px solid #2d3436;
+}
+
+/* Latest News */
+.latestNewsDiv {
+  padding: 0 20px;
+  height: 80vh;
+  margin-top: 200px;
+  margin-bottom: 250px;
+  width: 100%;
+}
+.latestNewsDiv .textDiv {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.latestNewsDiv .textDiv h1 {
+  font-size: 50px;
+  font-weight: 600;
+}
+
+.latestNewsDiv .textDiv h3 {
+  font-size: 30px;
+  font-weight: 400;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.latestNewsDiv .newsGallery {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.latestNewsDiv .newsGallery .div {
+  width: 30%;
+  margin: 25px 0;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  border: 1px dotted grey;
+  position: relative;
+}
+.latestNewsDiv .newsGallery .div1 {
+  top: 150px;
+  left: 30px;
+  animation: shake 8s infinite;
+  animation-delay: 1s;
+}
+.latestNewsDiv .newsGallery .div2 {
+  animation: shake 8s infinite;
+  animation-delay: 2s;
+}
+
+.latestNewsDiv .newsGallery .div3 {
+  top: 100px;
+  right: 30px;
+  animation: shake 8s infinite;
+  animation-delay: 3s;
+}
+.latestNewsDiv .newsGallery .div img {
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
+}
+
+.latestNewsDiv .newsGallery .div .text {
+  padding: 20px;
+  font-size: 18px;
+  color: grey;
+}
+
+.latestNewsDiv .newsGallery .div:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.2));
+}
+
+/* Technologies Section */
+.technologiesDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.technologiesDiv .headingDiv {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.technologiesDiv .headingDiv h1 {
+  font-size: 50px;
+  font-weight: 600;
+}
+
+.technologiesDiv .headingDiv h3 {
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.technologiesDiv .headingDiv h5 {
+  font-size: 15px;
+  color: #0984e3;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.technologiesDiv .headingDiv h5:hover {
+  text-decoration: underline;
+}
+
+.technologiesDiv .banner2 img {
+  width: 100%;
+  margin-top: 30px;
+  border-radius: 20px;
+  transition: transform 4s ease-in-out;
+  animation: zoomInOut 10s infinite;
+}
+
+.technologiesDiv .banner2 img:hover {
+  transform: scale(1.1);
+}
+
+/* Explore More */
+.exploreMoreDiv {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 150px;
+  margin-bottom: 150px;
+
+  width: 100%;
+}
+.exploreMoreDiv .textDiv h1 {
+  font-weight: 400;
+  font-size: 30px;
+  padding: 20px;
+}
+
+.exploreMoreDiv .div {
+  width: 25%;
+
+  padding: 20px;
+  text-align: center;
+}
+.exploreMoreDiv .div .subDiv {
+  border: 0.5px solid lightgrey;
+  border-radius: 10px;
+  background-color: white;
+  display: flex;
+  justify-content: left;
+  padding: 10px 10px 0 10px;
+  margin: 5px;
+  transition: 0.1s ease-in-out;
+}
+.exploreMoreDiv .div .subDiv:hover {
+  transform: scale(1.03);
+}
+
+.exploreMoreDiv .div .subDiv img {
+  width: 30px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.exploreMoreDiv .div .subDiv span {
+  font-size: 18px;
+  color: grey;
+  font-weight: 600;
+  margin-bottom: 10px;
+  position: relative;
+  top: 6px;
+  left: 5px;
+  width: 250px;
+}
+.exploreMoreDiv .div .subDiv i {
+  font-size: 30px;
+  position: relative;
+  left: 15px;
+  color: #0984e3;
+}
+.footerDiv {
+  padding: 0px 50px 50px 50px;
+  background-color: #f5f6fa;
+}
+.footerDiv .topDiv {
+  width: 90%;
+  padding: 3% 5% 3% 5%;
+  color: #2d3436;
+  border-bottom: 1px solid grey;
+}
+.footerDiv .topDiv span {
+  padding: 20px;
+  font-size: 25px;
+}
+.footerDiv .topDiv .socioLinks i {
+  padding: 20px 20px 20px 20px;
+  font-size: 25px;
+}
+.footerDiv .middleDiv {
+  width: 90%;
+  padding: 5%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid grey;
+}
+.footerDiv .middleDiv div {
+  color: #2d3436;
+  font-size: 18px;
+  width: 30%;
+}
+.footerDiv .middleDiv .signUpDiv input {
+  width: 300px;
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid grey;
+}
+.footerDiv .middleDiv .signUpDiv button {
+  width: 100px;
+  padding: 12px;
+  border-radius: 25px;
+  border: 1px solid grey;
+  font-size: 20px;
+  color: #0984e3;
+  background-color: white;
+}
+
+.footerDiv .bottomDiv {
+  width: 90%;
+  padding: 3% 5% 1% 5%;
+}
+.footerDiv .bottomDiv span {
+  padding: 20px;
+}
+.footerDiv .bottomDiv.bottomlogo {
+  font-weight: 800;
+}
+
+/* Animation */
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0); /* Start at the normal position */
+  }
+  30% {
+    transform: translateY(-30px); /* Move up */
+  }
+  50% {
+    transform: translateY(0); /* Return to the starting position */
+  }
+  70% {
+    transform: translateY(-15px); /* Move up a little less */
+  }
+  100% {
+    transform: translateY(0); /* End at the normal position */
+  }
+}
+@keyframes zoomInOut {
+  0% {
+    transform: scale(1); /* start at normal size */
+  }
+  50% {
+    transform: scale(1.1); /* zoom in to 1.1 */
+  }
+  100% {
+    transform: scale(1); /* zoom back to normal size */
+  }
+}
+@keyframes shake {
+  0% {
+    transform: translatey(0);
+  }
+  25% {
+    transform: translatey(-10px);
+  }
+  50% {
+    transform: translatey(10px);
+  }
+  75% {
+    transform: translatey(-10px);
+  }
+  100% {
+    transform: translatey(0);
+  }
+}
+
 
 
 
