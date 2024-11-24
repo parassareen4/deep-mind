@@ -12,7 +12,7 @@ import { MessageSquare, ArrowUpIcon, User2Icon, ArrowLeft } from "lucide-react";
 import { IoIosArrowDown } from "react-icons/io";
 import { motion, AnimatePresence } from "framer-motion";
 import toast, { Toaster } from "react-hot-toast";
-import responder from "../src/assets/chatgpt1.png"
+import responder from "../src/assets/responder.jpg";
 import copy from '../src/assets/copy.svg'
 import like from '../src/assets/like.svg'
 import dislike from '../src/assets/dislike.svg'
