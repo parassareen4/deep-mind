@@ -101,15 +101,13 @@ io.on('connection', (socket) => {
         io.emit('getRooms');
     });
 
-    socket.on('typing', (data) => {
-        const { roomId } = data;
-        socket.to(roomId).emit('typing');
-    });
-
-    socket.on('stopTyping', (data) => {
-        const { roomId } = data;
-        socket.to(roomId).emit('stopTyping');
-    });
+    socket.on("typing", ({ roomId }) => {
+        socket.to(roomId).emit("typing");
+      });
+      
+      socket.on("stopTyping", ({ roomId }) => {
+        socket.to(roomId).emit("stopTyping");
+      });
 
     // Handle room deletion
     socket.on('deleteRoom', (roomId) => {
