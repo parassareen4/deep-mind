@@ -253,7 +253,7 @@ const handleInputChange = (e) => {
                 sendMessage(e);
               }
             }}
-            placeholder="Ask the DeepMind team a question"
+            placeholder="Submit your question for the DeepMind AMA, and we'll reply here soon—stay tuned for your answer!"
             className="flex-1 py-2 sm:py-3 px-3 sm:px-5 rounded-[33px] bg-[#f4f4f4] focus-within:outline-none placeholder:text-slate-600 text-sm sm:text-base resize-none overflow-hidden"
             rows="1"
           />
