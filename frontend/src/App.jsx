@@ -17,7 +17,7 @@ import copy from '../src/assets/copy.svg'
 import like from '../src/assets/like.svg'
 import dislike from '../src/assets/dislike.svg'
 import share from '../src/assets/share.svg'
-import newchat from '../src/assets/newchat.svg'
+import logo from '../public/image.png'
 import LandingPage from "./Landing";
 
 const socket = io("https://chatgpttroll-3l88.onrender.com/");
@@ -171,8 +171,8 @@ const handleInputChange = (e) => {
     
 
           <div className="flex gap-1 items-center">
-            <span className="font-semibold text-lg sm:text-xl text-zinc-700">DeepSeek </span>
-            <IoIosArrowDown/>
+            <img className="h-8" src={logo} alt="" /> 
+            <IoIosArrowDown style={{color: '#4d6bfe'}}/>
           </div>
         </div>
         <h1 className="text-lg  sm:text-xl font-semibold hidden sm:flex gap-2 items-center">New Chat</h1>
@@ -253,7 +253,7 @@ const handleInputChange = (e) => {
                 sendMessage(e);
               }
             }}
-            placeholder="How can I help you today?"
+            placeholder="Message DeepSeek"
             className="flex-1 py-2 sm:py-3 px-3 sm:px-5 rounded-[33px] bg-[#f4f4f4] focus-within:outline-none placeholder:text-slate-600 text-sm sm:text-base resize-none overflow-hidden"
             rows="1"
           />
