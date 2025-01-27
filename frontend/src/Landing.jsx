@@ -63,7 +63,7 @@ function App() {
               </p>
             </div>
             </Link>
-           <Link >
+           <Link to="/user">
            <div className="bg-white rounded-2xl p-8 shadow-[0_0_20px_rgba(0,0,0,0.05)] hover:shadow-[0_0_25px_rgba(0,0,0,0.08)] transition-shadow">
               <h3 className="text-xl font-semibold text-[#4B9EFF] mb-4">Get DeepSeek App</h3>
               <p className="text-gray-600 leading-relaxed">
