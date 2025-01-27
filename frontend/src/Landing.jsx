@@ -5,6 +5,12 @@ function App() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50">
       {/* Navigation */}
+      <div style={{
+        backgroundColor: '#f5f6fa',
+        backgroundSize: 'cover',
+        backgroundImage: `url('https://cdn.deepseek.com/blog/banner-background.webp')`,
+      }}>
+      
       <nav className="fixed w-full bg-white z-50">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex justify-between h-14 items-center">
@@ -35,9 +41,12 @@ function App() {
       {/* Hero Section */}
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-[64px] font-bold text-[#4B9EFF] mb-4">
-            deepseek
-          </h1>
+          <div className='flex justify-center mb-4'>
+           <img src='image2.png' className="flex justify-center mb-4 text-[64px] font-bold text-[#4B9EFF] mb-4"
+            
+          /> 
+          </div>
+          
           <p className="text-[32px] text-gray-700 mb-16">
             Into the unknown
           </p>
@@ -60,6 +69,8 @@ function App() {
         </div>
       </section>
 
+      </div>
+      
       {/* Capabilities Section */}
       <section className="py-24 px-4">
         <div className="max-w-4xl mx-auto">
