@@ -1,5 +1,6 @@
 import React from 'react';
 import { Brain } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
         backgroundSize: 'cover',
         backgroundImage: `url('https://cdn.deepseek.com/blog/banner-background.webp')`,
       }}>
-      
+      <Link to="/user">
       <nav className="fixed w-full bg-white z-50">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex justify-between h-14 items-center">
@@ -29,6 +30,8 @@ function App() {
           </div>
         </div>
       </nav>
+      </Link>
+     
 
       {/* Announcement Banner */}
       <div className="pt-20 pb-4 text-center">
@@ -51,6 +54,7 @@ function App() {
             Into the unknown
           </p>
           <div className="grid md:grid-cols-2 gap-8 max-w-2xl mx-auto">
+            <Link to="/user">
             <div className="bg-white rounded-2xl p-8 shadow-[0_0_20px_rgba(0,0,0,0.05)] hover:shadow-[0_0_25px_rgba(0,0,0,0.08)] transition-shadow">
               <h3 className="text-xl font-semibold text-[#4B9EFF] mb-4">Start Now</h3>
               <p className="text-gray-600 leading-relaxed">
@@ -58,13 +62,17 @@ function App() {
                 Experience the intelligent model.
               </p>
             </div>
-            <div className="bg-white rounded-2xl p-8 shadow-[0_0_20px_rgba(0,0,0,0.05)] hover:shadow-[0_0_25px_rgba(0,0,0,0.08)] transition-shadow">
+            </Link>
+           <Link >
+           <div className="bg-white rounded-2xl p-8 shadow-[0_0_20px_rgba(0,0,0,0.05)] hover:shadow-[0_0_25px_rgba(0,0,0,0.08)] transition-shadow">
               <h3 className="text-xl font-semibold text-[#4B9EFF] mb-4">Get DeepSeek App</h3>
               <p className="text-gray-600 leading-relaxed">
                 Chat on the go with DeepSeek-V3<br />
                 Your free all-in-one AI tool
               </p>
             </div>
+           </Link>
+            
           </div>
         </div>
       </section>

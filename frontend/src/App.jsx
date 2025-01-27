@@ -171,11 +171,11 @@ const handleInputChange = (e) => {
     
 
           <div className="flex gap-1 items-center">
-            <span className="font-semibold text-lg sm:text-xl text-zinc-700">DeepMind </span>
+            <span className="font-semibold text-lg sm:text-xl text-zinc-700">DeepSeek </span>
             <IoIosArrowDown/>
           </div>
         </div>
-        <h1 className="text-lg  sm:text-xl font-semibold hidden sm:flex gap-2 items-center">AMA</h1>
+        <h1 className="text-lg  sm:text-xl font-semibold hidden sm:flex gap-2 items-center">New Chat</h1>
         <div className="flex items-center gap-2 sm:gap-6">
           <motion.button
             whileTap={{ scale: 0.9 }}
@@ -253,7 +253,7 @@ const handleInputChange = (e) => {
                 sendMessage(e);
               }
             }}
-            placeholder="Submit your question for the DeepMind AMA, and we'll reply here soon—stay tuned for your answer!"
+            placeholder="How can I help you today?"
             className="flex-1 py-2 sm:py-3 px-3 sm:px-5 rounded-[33px] bg-[#f4f4f4] focus-within:outline-none placeholder:text-slate-600 text-sm sm:text-base resize-none overflow-hidden"
             rows="1"
           />
@@ -266,7 +266,7 @@ const handleInputChange = (e) => {
         </div>
       </form>
       <div className="text-center p-2 text-xs sm:text-sm hidden sm:block text-gray-500">
-      Google DeepMind
+      AI-generated, for reference only
       </div>
     </div>
       );
