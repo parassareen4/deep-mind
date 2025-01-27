@@ -1,311 +1,136 @@
-import { Link } from 'react-router-dom';
+import React from 'react';
+import { Brain } from 'lucide-react';
+
 function App() {
-  return ( 
-    <>
-      <Navbar />
-      <Banner />
-      <LatestNews />
-      <Technologies />
-      <ExploreMore />
-      <Footer />
-    </>
-  );
-}
-
-function Navbar() {
   return (
-    <div className="navDiv">
-      <Logo />
-      <LeftMenu />
-      <RightMenu />
-    </div>
-  );
-}
-
-function Logo() {
-  return (
-    <div className="logoDiv">
-      <img
-        src="https://w7.pngwing.com/pngs/523/198/png-transparent-google-logo-google-search-google-play-google-text-logo-number-thumbnail.png"
-        alt="Logo"
-      />
-      <span>DeepMind</span>
-    </div>
-  );
-}
-
-function LeftMenu() {
-  return (
-    <div className="leftMenuDiv">
-      <div className="menuItem">
-        <a href="#banner">
-          About <i className="bx bx-chevron-down"></i>
-        </a>
-      </div>
-      <div className="menuItem">
-        <a href="#research">
-          Research <i className="bx bx-chevron-down"></i>
-        </a>
-      </div>
-      <div className="menuItem">
-        <a href="#technologies">
-          Technology <i className="bx bx-chevron-down"></i>
-        </a>
-      </div>
-      <div className="menuItem">
-        <a href="#discover">
-          Discover <i className="bx bx-chevron-down"></i>
-        </a>
-      </div>
-    </div>
-  );
-}
-
-function RightMenu() {
-  return (
-    <div className="rightMenuDiv">
-      <div className="searchIcon">
-        <i className="bx bx-search-alt-2"></i>
-      </div>
-      <div className="geminiIcon">
-        <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThr7qrIazsvZwJuw-uZCtLzIjaAyVW_ZrlEQ&s"
-          alt="Gemini Icon"
-        />
-      </div>
-    </div>
-  );
-}
-
-function Banner() {
-  return (
-    <div className="bannerDiv" id="banner">
-      <img src="unnamed_014.webp" alt="Banner" />
-      <h1>DEEPMIND AMA</h1>
-      <Link to={'/user'}>
-      <button className="learnMoreBtn">Submit Your Question</button>
-      </Link>
-      
-      <h3>A universal AI agent that is helpful in everyday life</h3>
-    </div>
-  );
-}
-
-function LatestNews() {
-  return (
-    <div className="latestNewsDiv" id="research">
-      <div className="textDiv">
-        <h1>Latest News</h1>
-
-        <h3>Discover our latest AI breakthroughs and updates from the lab</h3>
-      </div>
-      <div className="newsGallery">
-        <div className="div div1">
-          <img
-            className="image"
-            src="https://unsplash.com/blog/content/images/size/w1000/2023/07/AI_safety_ethics_08L_ariel-lu_google-deepmind.jpg"
-            alt="AI Safety"
-          />
-          <div className="text">
-            AlphaQubit tackles one of quantum computing's biggest challenges
-            <br />
-            Our new AI system accurately identifies errors inside quantum
-            computers...
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50">
+      {/* Navigation */}
+      <nav className="fixed w-full bg-white z-50">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="flex justify-between h-14 items-center">
+            <div className="flex items-center">
+              <img src='image.png' className="h-8 w-30 text-[#4B9EFF]" />
+             
+            </div>
+            <div className="flex items-center space-x-6">
+              <a href="#" className="text-gray-600 hover:text-gray-900 text-sm">
+                API Platform ↗
+              </a>
+              <a href="#" className="text-gray-600 hover:text-gray-900 text-sm">
+                中文
+              </a>
+            </div>
           </div>
         </div>
-        <div className="div div2">
-          <img
-            className="image"
-            src="https://unsplash.com/blog/content/images/size/w1000/2023/07/AI_safety_ethics_05L_ariel-lu_google-deepmind.jpg"
-            alt="AI Forum"
-          />
-          <div className="text">
-            The AI for Science Forum: A new era of discovery
-            <br />
-            The AI science forum highlights AI's role in revolutionizing
-            scientific research...
-          </div>
-        </div>
-        <div className="div div3">
-          <img
-            className="image"
-            src="https://unsplash.com/blog/content/images/size/w1000/2023/07/AI_safety_ethics_04L_ariel-lu_google-deepmind.jpg"
-            alt="Audio Generation"
-          />
-          <div className="text">
-            Pushing the frontiers of audio generation
-            <br />
-            Our pioneering speech generation technologies are helping people
-            around the world...
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
+      </nav>
 
-function Technologies() {
-  return (
-    <div className="technologiesDiv" id="technologies">
-      <div className="headingDiv">
-        <h1>Technologies</h1>
-        <br />
-        <br />
+      {/* Announcement Banner */}
+      <div className="pt-20 pb-4 text-center">
+        <p className="text-sm text-gray-600">
+          🎉 DeepSeek-R1 is now live and open source, rivaling OpenAI's Model o1. Available on web, app, and API.
+          <a href="#" className="text-[#4B9EFF] hover:text-blue-600 ml-1">Click for details.</a>
+        </p>
+      </div>
 
-        <h3>Breakthrough research. Transformative products.</h3>
-        <br />
-
-        <h5>View all technologies</h5>
-      </div>
-      <div className="banner2">
-        <img
-          src="https://as2.ftcdn.net/v2/jpg/07/78/29/75/1000_F_778297590_diQ5WDYC9odh6wMJiKwXCBxwgyZQNo6n.jpg"
-          alt="Technologies"
-        />
-      </div>
-    </div>
-  );
-}
-
-function ExploreMore() {
-  return (
-    <div className="exploreMoreDiv" id="discover">
-      <div className="div textDiv">
-        <h1>Explore our other teams and product areas</h1>
-      </div>
-      <div className="div optionsDiv">
-        <div className="subDiv">
-          <img
-            src="https://cdn-icons-png.flaticon.com/128/281/281764.png"
-            alt="Google AI"
-          />
-          <span>Google AI</span>
-          <i class="bx bx-right-arrow-alt"></i>
-        </div>
-        <div className="subDiv">
-          <img
-            src="https://cdn-1.webcatalog.io/catalog/google-ai-studio/google-ai-studio-icon-filled-256.png?v=1714782928979"
-            alt="Google AI"
-          />
-          <span>Google AI Studio</span>
-          <i class="bx bx-right-arrow-alt"></i>
-        </div>
-        <div className="subDiv">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMxJvqd1ogHWZPF2JuWlYdNp5TUGtNpYu9LA&s"
-            alt="Google AI"
-          />
-          <span>Google Cloud</span>
-          <i class="bx bx-right-arrow-alt"></i>
-        </div>
-      </div>
-      <div className="div optionsDiv">
-        <div className="subDiv">
-          <img
-            src="https://cdn-icons-png.flaticon.com/128/281/281764.png"
-            alt="Google AI"
-          />
-          <span>Google AI For Developers</span>
-          <i class="bx bx-right-arrow-alt"></i>
-        </div>
-        <div className="subDiv">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThr7qrIazsvZwJuw-uZCtLzIjaAyVW_ZrlEQ&s"
-            alt="Google AI"
-          />
-          <span>Gemini</span>
-          <i class="bx bx-right-arrow-alt"></i>
-        </div>
-        <div className="subDiv">
-          <img
-            src="https://cdn.icon-icons.com/icons2/4184/PNG/512/virtual_labs_experiments_online_education_icon_262292.png"
-            alt="Google AI"
-          />
-          <span>Google Labs</span>
-          <i class="bx bx-right-arrow-alt"></i>
-        </div>
-      </div>
-    </div>
-  );
-}
-function Footer() {
-  return (
-    <div className="footerDiv">
-      <div className="topDiv">
-        <span>Follow us</span>
-        <span className="socioLinks">
-          <i class="bx bxl-twitter"></i>
-          <i class="bx bxl-instagram"></i>
-          <i class="bx bxl-facebook"></i>
-          <i class="bx bxl-github"></i>
-        </span>
-      </div>
-      <div className="middleDiv">
-        <div>
-          About
-          <br />
-          <br />
-          About Google DeepMind
-          <br />
-          <br />
-          Responsibility & Safety
-          <br />
-          <br />
-          Research
-          <br />
-          <br />
-          Technologies
-          <br />
-          <br />
-          Blog
-          <br />
-          <br />
-          Careers
-          <br />
-          <br />
-        </div>
-        <div>
-          Learn more Gemini
-          <br />
-          <br />
-          Veo
-          <br />
-          <br />
-          Imagen 3
-          <br />
-          <br />
-          SynthID
-        </div>
-        <div className="signUpDiv">
-          <span>Sign up for updates on our latest innovations</span>
-          <br />
-          <br />
-          <br />
-
-          <input type="text" placeHolder="Email Address" />
-          <br />
-          <br />
-
-          <p>
-            I accept Google's Terms and Conditions and acknowledge that my
-            information will be used in accordance with Google's Privacy Policy.
+      {/* Hero Section */}
+      <section className="py-16 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-[64px] font-bold text-[#4B9EFF] mb-4">
+            deepseek
+          </h1>
+          <p className="text-[32px] text-gray-700 mb-16">
+            Into the unknown
           </p>
-          <br />
-          <br />
-
-          <button>Sign Up</button>
+          <div className="grid md:grid-cols-2 gap-8 max-w-2xl mx-auto">
+            <div className="bg-white rounded-2xl p-8 shadow-[0_0_20px_rgba(0,0,0,0.05)] hover:shadow-[0_0_25px_rgba(0,0,0,0.08)] transition-shadow">
+              <h3 className="text-xl font-semibold text-[#4B9EFF] mb-4">Start Now</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Free access to DeepSeek-V3.<br />
+                Experience the intelligent model.
+              </p>
+            </div>
+            <div className="bg-white rounded-2xl p-8 shadow-[0_0_20px_rgba(0,0,0,0.05)] hover:shadow-[0_0_25px_rgba(0,0,0,0.08)] transition-shadow">
+              <h3 className="text-xl font-semibold text-[#4B9EFF] mb-4">Get DeepSeek App</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Chat on the go with DeepSeek-V3<br />
+                Your free all-in-one AI tool
+              </p>
+            </div>
+          </div>
         </div>
-      </div>
-      <div className="bottomDiv">
-        <span>Google</span>
-        <span> AboutGoogle</span>
-        <span>Google Products</span>
-        <span>Privacy</span>
-        <span>Terms</span>
-      </div>
+      </section>
+
+      {/* Capabilities Section */}
+      <section className="py-24 px-4">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-[32px] font-bold text-center text-gray-900 mb-6">
+            DeepSeek-V3 Capabilities
+          </h2>
+          <p className="text-center text-gray-600 mb-3 leading-relaxed">
+            DeepSeek-V3 achieves a significant breakthrough in inference speed over previous models.
+          </p>
+          <p className="text-center text-gray-600 mb-16 leading-relaxed">
+            It tops the leaderboard among open-source models and rivals the most advanced closed-source models globally.
+          </p>
+
+          {/* Comparison Table */}
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="border-b border-gray-100">
+                  <th className="text-left py-4 px-6 font-medium text-gray-600">Benchmark (Metric)</th>
+                  <th className="py-4 px-6 bg-blue-50 text-[#4B9EFF] font-medium">DeepSeek V3</th>
+                  <th className="py-4 px-6 font-medium text-gray-600">DeepSeek V2.5</th>
+                  <th className="py-4 px-6 font-medium text-gray-600">Qwen2.5</th>
+                  <th className="py-4 px-6 font-medium text-gray-600">Llama3.1</th>
+                  <th className="py-4 px-6 font-medium text-gray-600">Claude-3.5</th>
+                  <th className="py-4 px-6 font-medium text-gray-600">GPT-4o</th>
+                </tr>
+              </thead>
+              <tbody className="text-gray-600">
+                <tr className="border-b border-gray-100">
+                  <td className="py-4 px-6">Architecture</td>
+                  <td className="py-4 px-6 bg-blue-50 text-[#4B9EFF]">MoE</td>
+                  <td className="py-4 px-6">MoE</td>
+                  <td className="py-4 px-6">Dense</td>
+                  <td className="py-4 px-6">Dense</td>
+                  <td className="py-4 px-6">-</td>
+                  <td className="py-4 px-6">-</td>
+                </tr>
+                <tr className="border-b border-gray-100">
+                  <td className="py-4 px-6"># Activated Params</td>
+                  <td className="py-4 px-6 bg-blue-50 text-[#4B9EFF]">37B</td>
+                  <td className="py-4 px-6">21B</td>
+                  <td className="py-4 px-6">72B</td>
+                  <td className="py-4 px-6">405B</td>
+                  <td className="py-4 px-6">-</td>
+                  <td className="py-4 px-6">-</td>
+                </tr>
+                <tr className="border-b border-gray-100">
+                  <td className="py-4 px-6">MMLU (EM)</td>
+                  <td className="py-4 px-6 bg-blue-50 text-[#4B9EFF]">88.5</td>
+                  <td className="py-4 px-6">80.6</td>
+                  <td className="py-4 px-6">85.3</td>
+                  <td className="py-4 px-6">88.6</td>
+                  <td className="py-4 px-6">88.3</td>
+                  <td className="py-4 px-6">87.2</td>
+                </tr>
+                <tr className="border-b border-gray-100">
+                  <td className="py-4 px-6">DROP (3-shot F1)</td>
+                  <td className="py-4 px-6 bg-blue-50 text-[#4B9EFF]">91.6</td>
+                  <td className="py-4 px-6">87.8</td>
+                  <td className="py-4 px-6">76.7</td>
+                  <td className="py-4 px-6">88.7</td>
+                  <td className="py-4 px-6">88.3</td>
+                  <td className="py-4 px-6">83.7</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
 
 export default App;
-
