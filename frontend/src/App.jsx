@@ -171,8 +171,14 @@ const handleInputChange = (e) => {
     
 
           <div className="flex gap-1 items-center">
-            <img className="h-8" src={logo} alt="" /> 
-            <IoIosArrowDown style={{color: '#4d6bfe'}}/>
+         
+            <header style={{
+              fontSize: '1.5em',
+              fontWeight: 'bold',
+              color: '#000000',
+              marginLeft: '1em',
+              fontFamily: 'Montserrat',
+            }}> Hustlers University</header>
           </div>
         </div>
         <h1 className="text-lg  sm:text-xl font-semibold hidden sm:flex gap-2 items-center">New Chat</h1>
@@ -207,7 +213,7 @@ const handleInputChange = (e) => {
               >
                 {msg.role === 'responder' && (
                   
-                    <img src={responder} alt="Responder Logo" className="  rounded-full h-7 w-7 object-cover " />
+                    <img src={responder} alt="Responder Logo" className="  rounded-full h-10 w-10  " />
                   
                 )}
                 <div
@@ -253,7 +259,7 @@ const handleInputChange = (e) => {
                 sendMessage(e);
               }
             }}
-            placeholder="Message DeepSeek"
+            placeholder="Message Hustlers University"
             className="flex-1 py-2 sm:py-3 px-3 sm:px-5 rounded-[33px] bg-[#f4f4f4] focus-within:outline-none placeholder:text-slate-600 text-sm sm:text-base resize-none overflow-hidden"
             rows="1"
           />
@@ -266,7 +272,7 @@ const handleInputChange = (e) => {
         </div>
       </form>
       <div className="text-center p-2 text-xs sm:text-sm hidden sm:block text-gray-500">
-      AI-generated, for reference only
+      From Zero to Hero with Hustler's University
       </div>
     </div>
       );
